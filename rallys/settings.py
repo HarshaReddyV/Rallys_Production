@@ -30,6 +30,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://rallyspro.azurewebsites.net/','https://*.127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = ["https://rallyspro.azurewebsites.net/"]
+CSRF_ALLOWED_ORIGINS = ["https://rallyspro.azurewebsites.net/"]
+CORS_ORIGINS_WHITELIST = ["https://rallyspro.azurewebsites.net/"]
 
 # Application definition
 
