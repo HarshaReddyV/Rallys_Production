@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://rallyspro.azurewebsites.net/','https://*.127.0.0.1']
 CSRF_ALLOWED_ORIGINS = ['https://rallyspro.azurewebsites.net/']
 CORS_ORIGINS_WHITELIST = ['https://rallyspro.azurewebsites.net/']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
