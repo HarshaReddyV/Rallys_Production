@@ -43,17 +43,26 @@
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li> 
+                {% if not user.is_authenticated %}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'signin' %}">Log in</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'signup' %}">Sign up</a>
                 </li>
+                {% endif %}
+            
+                {% if user.is_authenticated %}
                 <li class="nav-item">
                   <a class="nav-link"  href="{% url 'profile' %}">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.linkedin.com/in/harsha-reddy-vanga-2686271a3/" target="_blank">About Me</a>
+                  <a class="nav-link" href="{% url 'signout' %}">Log out</a>
+                </li>
+                {% endif %}
+
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.linkedin.com/in/harsha-reddy-vanga-2686271a3/" target="_blank">About Me</a>
                 </li>
                               
               </ul>

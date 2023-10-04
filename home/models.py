@@ -5,7 +5,10 @@ from django.core.exceptions import ValidationError
 
 # Create your models here.
 class User(AbstractUser):
+    firstName = models.CharField(max_length= 20, null = True)
+    lastName = models.CharField(max_length= 20, null=True)
     pass
+  
 
 class Tickers(models.Model):
     id = models.AutoField(primary_key=True)
